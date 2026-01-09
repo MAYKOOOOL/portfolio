@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAYKOL | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="MAYKOL wo BG.png">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-content">
+            <div class="nav-links">
+                <a href="index.html" class="nav-item active" data-key="nav-home">Home</a>
+                <button class="nav-item" data-key="nav-info" onclick="toggleModal()">Creator's Information</button>
+            </div>
+
+            <div class="nav-controls">
+                <input type="text" id="projectSearch" placeholder="Search projects..." onkeyup="filterProjects()">
+                
+                <div class="settings-dropdown">
+                    <button class="settings-btn" data-key="nav-lang">🌐 Language</button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="changeLanguage('en')">English</a>
+                        <a href="#" onclick="changeLanguage('tl')">Tagalog</a>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <img src="LOGO.png" alt="Logo" class="header-logo">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="portfolio-container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="MAYKOL wo BG.png" alt="MAYKOL Logo" class="profile-pic">
+            </div>
+            <h1 class="profile-name">MAYKOL</h1>
+            <p class="profile-bio" data-key="bio">Engineering the weight of every strike and the soul of every soundscape.</p>
+
+            <ul class="profile-details">
+                <li data-key="bullet1">Aspiring Game Developer specializing in UI Design and Sound Production.</li>
+                <li data-key="bullet2">Proficient in Unity, C#, C++, and AI system implementation.</li>
+                <li data-key="bullet3">Experienced in project management and collaborative team leadership.</li>
+                <li data-key="bullet4">Top 19 National Semi-finalist (YCC2) and Award-winning Game Jam developer.</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h2 class="section-label" data-key="section-label">Games Created</h2>
+            <div class="projects-grid" id="projectsGrid">
+                
+                <a href="https://github.com/MAYKOOOOL/SORT-IT-OUT-" target="_blank" class="project-card">
+                    <div class="card-image-container">
+                        <img src="sort1.png" class="img-primary" alt="Main">
+                        <img src="sort2.png" class="img-secondary" alt="Hover">
+                    </div>
+                    <div class="card-details">
+                        <span class="project-title">SORT IT OUT!</span>
+                        <p class="project-desc">3D Survival Adventure & Puzzle. Capstone project developed in Unity.</p>
+                        
+                    </div>
+                </a>
+
+                <a href="https://github.com/MAYKOOOOL/Mendville" target="_blank" class="project-card">
+                    <div class="card-image-container">
+                        <img src="mendville.jfif" class="img-primary" alt="Main">
+                        <img src="mendville2.jfif" class="img-secondary" alt="Hover">
+                    </div>
+                    <div class="card-details">
+                        <span class="project-title">Mendville</span>
+                        <p class="project-desc">2D Educational Game. Commissioned project featuring custom 2D assets.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/MAYKOOOOL/SALDANG-The-Lost-Soul-of-Bicol" target="_blank" class="project-card">
+                    <div class="card-image-container">
+                        <img src="saldang-logo.png" class="img-primary" alt="Main">
+                        <img src="saldang2.PNG" class="img-secondary" alt="Hover">
+                    </div>
+                    <div class="card-details">
+                        <span class="project-title">SALDANG: The Lost Soul of Bicol</span>
+                        <p class="project-desc">Award-winning 2D Roguelike for Mythic Bicol Game Jam 2025.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/MAYKOOOOL/RUN" target="_blank" class="project-card">
+                    <div class="card-image-container">
+                        <img src="RUN!.png" class="img-primary" alt="Main">
+                        <img src="chase2.PNG" class="img-secondary" alt="Hover">
+                    </div>
+                    <div class="card-details">
+                        <span class="project-title">CHASE!</span>
+                        <p class="project-desc">3D stealth adventure where every step counts. Escape unseen.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/MAYKOOOOL/Mr.Kupido" target="_blank" class="project-card">
+                    <div class="card-image-container">
+                        <img src="kupido.png" class="img-primary" alt="Main">
+                        <img src="kupido2.png" class="img-secondary" alt="Hover">
+                    </div>
+                    <div class="card-details">
+                        <span class="project-title">MR. KUPIDO</span>
+                        <p class="project-desc">2D shooting platformer. Top 19 Semi-finalist in YCC2 National Competition.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/MAYKOOOOL/POLYWARSv1" target="_blank" class="project-card">
+                    <div class="card-image-container">
+                        <img src="POLYWARS POSTER.png" class="img-primary" alt="Main">
+                        <img src="polywars2.PNG" class="img-secondary" alt="Hover">
+                    </div>
+                    <div class="card-details">
+                        <span class="project-title">POLYWARS</span>
+                        <p class="project-desc">2D platformer shooter where a veteran hunts down thieves.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/MAYKOOOOL/JUMP-CLASHv1" target="_blank" class="project-card">
+                    <div class="card-image-container">
+                        <img src="Jump Clash.PNG" class="img-primary" alt="Main">
+                        <img src="Jumpclash2.PNG" class="img-secondary" alt="Hover">
+                    </div>
+                    <div class="card-details">
+                        <span class="project-title">JUMP CLASH</span>
+                        <p class="project-desc">2D casual duel where simplicity meets chaos. Quick reflexes required.</p>
+                    </div>
+                </a>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="cvModal" class="modal-overlay">
+        <div class="cv-container">
+            <button class="modal-close" onclick="toggleModal()">&times;</button>
+            <div class="cv-scroll-area">
+                <img src="1.png" alt="Resume Page 1" class="resume-img">
+                <img src="2.png" alt="Resume Page 2" class="resume-img">
+            </div>
+        </div>
+    </div>
+
+    <footer class="social-footer">
+        <div class="social-grid">
+            <a href="https://www.facebook.com/profile.php?id=61556873084556" class="social-box"><img src="facebook.png" alt="FB"></a>
+            <a href="https://twitter.com/KurasmagProd" class="social-box"><img src="twitter.png" alt="X"></a>
+            <a href="https://www.youtube.com/channel/UCyPrPXjrzQEoKkWmuorsxuw" class="social-box"><img src="youtube.png" alt="YT"></a>
+            <a href="https://www.instagram.com/kurasmag.prod" class="social-box"><img src="instagram.png" alt="IG"></a>
+            <a href="https://kurasmag.itch.io" class="social-box"><img src="itch.png" alt="Itch"></a>
+            <a href="https://ko-fi.com/kurasmagprod" class="social-box"><img src="ko-fi.png" alt="Ko-fi"></a>
+            <a href="https://www.threads.net/@kurasmag.prod" class="social-box"><img src="threads.png" alt="Threads"></a>
+            <a href="https://www.pinterest.ph/kurasmagprod/" class="social-box"><img src="pinterest.png" alt="Pinterest"></a>
+            <a href="https://www.tiktok.com/@kurasmagprod" class="social-box"><img src="tiktok.png" alt="TikTok"></a>
+            <a href="https://github.com/MAYKOOOOL" class="social-box"><img src="github.png" alt="Git"></a>
+        </div>
+        <p class="footer-contact">Contact: +63 968 623 5145 | kurasmagprod.nineteen@gmail.com</p>
+    </footer>
+
+    <script>
+        // Modal Logic
+        function toggleModal() {
+            const modal = document.getElementById('cvModal');
+            const isVisible = modal.style.display === 'flex';
+            modal.style.display = isVisible ? 'none' : 'flex';
+            document.body.style.overflow = isVisible ? 'auto' : 'hidden';
+        }
+
+        // Search Logic
+        function filterProjects() {
+            let input = document.getElementById('projectSearch').value.toLowerCase();
+            let cards = document.getElementsByClassName('project-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].querySelector('.project-title').innerText.toLowerCase();
+                let desc = cards[i].querySelector('.project-desc').innerText.toLowerCase();
+                cards[i].style.display = (title.includes(input) || desc.includes(input)) ? "" : "none";
+            }
+        }
+
+        // Language Logic
+        const translations = {
+            'en': {
+                'nav-home': 'Home',
+                'nav-info': "Creator's Information",
+                'nav-lang': '🌐 Language',
+                'bio': 'Engineering the weight of every strike and the soul of every soundscape.',
+                'section-label': 'Games Created',
+                'bullet1': 'Aspiring Game Developer specializing in UI Design and Sound Production.',
+                'bullet2': 'Proficient in Unity, C#, C++, and AI system implementation.',
+                'bullet3': 'Experienced in project management and collaborative team leadership.',
+                'bullet4': 'Top 19 National Semi-finalist (YCC2) and Award-winning Game Jam developer.'
+            },
+            'tl': {
+                'nav-home': 'Paunang Pahina',
+                'nav-info': 'Impormasyon ng May-Akda',
+                'nav-lang': '🌐 Wika',
+                'bio': 'Binibigyang-buhay ang bawat galaw at bawat tunog sa loob ng laro..',
+                'section-label': 'Mga Larong Nilikha',
+                'bullet1': 'Naglalayong maging Game Developer na eksperto sa UI Design at Sound Production.',
+                'bullet2': 'Mahusay sa Unity, C#, C++, at AI system implementation.',
+                'bullet3': 'May karanasan sa project management at pagpapatakbo ng grupo.',
+                'bullet4': 'Top 19 National Semi-finalist (YCC2) at Award-winning Game Jam developer.'
+            }
+        };
+
+        function changeLanguage(lang) {
+            Object.keys(translations[lang]).forEach(key => {
+                const element = document.querySelector(`[data-key="${key}"]`);
+                if (element) element.innerText = translations[lang][key];
+            });
+        }
+    </script>
+</body>
+</html>
