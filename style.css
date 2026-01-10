@@ -9,7 +9,10 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--bg-dark); color: var(--text-white); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+body { background: #0d1117; /* Replaced var(--bg-dark) for compatibility */
+    color: #e6d058; /* Standard GitHub-style text color */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
+} 
 
 /* HEADER & CONTROLS */
 .main-nav { 
@@ -37,7 +40,7 @@ body { background: var(--bg-dark); color: var(--text-white); font-family: -apple
 .nav-links { display: flex; gap: 30px; }
 
 .nav-item { 
-    background: none; border: none; color: #ffffff; font-size: 16px; 
+    background: none; border: none; color: #e6d058; font-size: 16px; 
     font-weight: 800; cursor: pointer; text-decoration: none; 
 }
 
@@ -56,7 +59,7 @@ body { background: var(--bg-dark); color: var(--text-white); font-family: -apple
 
 #projectSearch:focus { width: 220px; border-color: var(--github-blue); }
 
-.settings-btn { background: none; border: none; font-weight: 800; cursor: pointer; color: #ffffff; }
+.settings-btn { background: none; border: none; font-weight: 800; cursor: pointer; color: #e6d058; }
 
 .settings-dropdown { position: relative; display: inline-block; }
 
@@ -126,4 +129,156 @@ body { background: var(--bg-dark); color: var(--text-white); font-family: -apple
     .portfolio-container { flex-direction: column; align-items: center; }
     .sidebar { width: 100%; text-align: center; }
     .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* Technical Experience Styles */
+.technical-section {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tech-main-title {
+    color: #e6d058; /* Yellow/Gold title color */
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.tech-card {
+    background: #111418; /* Darker card background */
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.tech-category {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 20px;
+    color: white;
+}
+
+/* Specific Tag Colors from Screenshot */
+.unity { background-color: #008B94; }
+.c-sharp { background-color: #10853F; }
+.cpp { background-color: #636E72; }
+.shader { background-color: #A327D6; }
+.vfx { background-color: #D62797; }
+
+.js { background-color: #2E78F2; }
+.github { background-color: #10853F; }
+.frontend { background-color: #4B4B4B; }
+.backend { background-color: #8327D6; }
+
+/* CTA Section Styling */
+.cta-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: #0d1117; /* Matches your background */
+    border-top: 1px solid var(--border-grey);
+    margin-top: 40px;
+}
+
+.cta-title {
+    color: #e6d058; /* Gold/Yellow color from Technical Experience */
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cta-subtitle {
+    color: var(--text-white);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Download Button Styling */
+.download-cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: hsl(215, 80%, 61%); /* Dark button background */
+    color: var(--text-white);
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid var(--border-grey);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.download-cv-btn:hover {
+    background-color: #30363d;
+    border-color: var(--github-blue);
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1); /* Makes the icon white */
+}
+
+/* Contact Section Sidebar Styles */
+.contact-section {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-main-title {
+    color: #e6d058; /* Gold/Yellow title to match Technical Experience */
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.contact-card {
+    background: #111418; /* Dark card background */
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-icon {
+    font-size: 16px;
+}
+
+.contact-text {
+    font-size: 13px;
+    color: #c9d1d9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Hover effect for the email link */
+a.contact-text:hover {
+    color: #58a6ff; /* GitHub blue hover */
 }
